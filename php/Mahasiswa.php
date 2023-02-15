@@ -1,13 +1,17 @@
 <?php
 
+#deklarasi kelas Mahasiswa
 class Mahasiswa {
 
+
+	#deklarasi atribut untuk kelas Mahasiswa
 	private $nim = '';
 	private $nama = '';
 	private $gender = '';
 	private $fakultas = '';
 	private $prodi = '';
 
+	#constructor dengan parameter atribut
 	public function __construct($nim = '', $nama = '', $gender = '', $fakultas = '', $prodi = ''){
 		$this->nim = $nim;
 		$this->nama = $nama;
@@ -15,6 +19,8 @@ class Mahasiswa {
 		$this->fakultas = $fakultas;
 		$this->prodi = $prodi;
 	}
+
+	#setter untuk mengset value pada tiap atributnya
 
 	public function set_nim($nim){
 		$this->nim = $nim;
@@ -36,6 +42,7 @@ class Mahasiswa {
 		$this->prodi = $prodi;
 	}
 
+	#getter untuk mengambil value dari tiap atribut
 	public function get_nim(){
 		return $this->nim;
 	}

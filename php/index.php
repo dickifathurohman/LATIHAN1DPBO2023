@@ -1,17 +1,21 @@
 <?php
 
-require ('Mahasiswa.php');
+require ('Mahasiswa.php'); #mengekspor file Mahasiswa.php
 
+	#mengisi data untuk student1
 	$student1 = new Mahasiswa('2103842', 'Dicki Fathurohman', 'Male', 'FPMIPA', 'Computer Science');
 	
+	#kemudian menampilkannya
 	echo '<hr>';
 
+	//dalam menampilkan data digunakan fungsi get untuk mengambil value dari atributnya
 	echo 'NIM      : ' . $student1->get_nim() . '<br>';
 	echo 'Nama     : ' . $student1->get_nama() . '<br>';
 	echo 'Gender   : ' . $student1->get_gender() . '<br>';
 	echo 'Fakultas : ' . $student1->get_fakultas() . '<br>';
 	echo 'Prodi    : ' . $student1->get_prodi() . '<br>';
 
+	#hal yang sama dilakukan untuk bagian selanjutnya
 
 	$student2 = new Mahasiswa('0221994', 'Park Jin-Young', 'Male', 'FPSD', 'Drama');
 
