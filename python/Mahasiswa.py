@@ -1,11 +1,14 @@
+#deklarasi kelas Mahasiswa
 class Mahasiswa:
 
+	#atribut untuk mahasiswa
 	__nim = ""
 	__nama = ""
 	__gender = ""
 	__prodi = ""
 	__fakultas = ""
 
+	#constructor
 	def __init__(self, nim = "", nama = "", gender = "", prodi = "", fakultas = ""):
 		self.__nim = nim
 		self.__nama = nama
@@ -13,7 +16,7 @@ class Mahasiswa:
 		self.__prodi = prodi
 		self.__fakultas = fakultas
 
-	#setter
+	#setter untuk mengset value pada atribut
 
 	def set_nim(self, nim):
 		self.__nim = nim;
@@ -30,7 +33,7 @@ class Mahasiswa:
 	def set_fakultas(self, fakultas):
 		self.__fakultas = fakultas;
 
-	#getter
+	#getter untuk mengambil value dari atribut
 
 	def get_nim(self):
 		return self.__nim
