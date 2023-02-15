@@ -1,11 +1,14 @@
+//deklarasi class Mahasiswa
 public class Mahasiswa{
 
+	//deklarasi atribut yang dimiliki mahasiswa, semuanya bertipe string
 	private String nim;
 	private String nama;
 	private String gender;
 	private String prodi;
 	private String fakultas;
 
+	//default constructor
 	public Mahasiswa(){
 		this.nim = "";
 		this.nama = "";
@@ -14,6 +17,7 @@ public class Mahasiswa{
 		this.fakultas = "";
 	}
 
+	//constructor dengan atribut sebagai parameternya
 	public Mahasiswa(String nim, String nama, String gender, String prodi, String fakultas){
 		this.nim = nim;
 		this.nama = nama;
@@ -21,6 +25,8 @@ public class Mahasiswa{
 		this.prodi = prodi;
 		this.fakultas = fakultas;
 	}
+
+	//setter untuk mengset value pada atribut
 
 	public void set_nim(String nim){
 		this.nim = nim;
@@ -41,6 +47,8 @@ public class Mahasiswa{
 	public void set_fakultas(String fakultas){
 		this.fakultas = fakultas;
 	}
+
+	//getter untuk mengambil value pada atribut
 
 	public String get_nim(){
 		return this.nim;

@@ -5,26 +5,28 @@ public class Main{
 
 	public static void main(String[] args){
 
-		Mahasiswa temp = new Mahasiswa();
-		Crud ex = new Crud();
+		Mahasiswa temp = new Mahasiswa(); //membuat objek mahasiswa
+		Crud ex = new Crud(); //membuat objek crud
 
+		//untuk tampungan masukan
 		String nim, nama, gender, prodi, fakultas;
-		String order;
+		String command;
 
-		int i = 0;
-
+		//scanner agar dapat meminta masukan
 		Scanner sc = new Scanner(System.in);
 
 
 		do{
-			System.out.println("Please insert your order (add/update/delete/show/exit) : ");
+			System.out.println("Please insert your command (add/update/delete/show/exit) : ");
 
-			order = sc.next();
+			//minta masukan perintah
+			command = sc.next();
 
 			temp = new Mahasiswa();
 
-			if(order.equals("add")){
+			if(command.equals("add")){ //jika masukan perintahnya adalah add
 
+				//minta masukan value untuk atribut
 				System.out.println("Student ID/NIM : ");
 				nim = sc.next();
 				System.out.println("Name : ");
@@ -36,25 +38,27 @@ public class Main{
 				System.out.println("Degree : ");
 				prodi = sc.next();
 
+				//set valuenya ke atribut
 				temp.set_nim(nim);
 				temp.set_nama(nama);
 				temp.set_gender(gender);
 				temp.set_fakultas(fakultas);
 				temp.set_prodi(prodi);
 
-				ex.add(temp);
+				ex.add(temp); //panggil prosedur add untuk menambahkan data ke list
 			}
-			else if(order.equals("delete")){
+			else if(command.equals("delete")){ //jika delete
 				System.out.println("Please Insert the Student ID/NIM of the student you want to delete :");
-				nim = sc.next();
-				temp.set_nim(nim);
+				nim = sc.next(); //minta masukan nim yang ingin dihapus
+				temp.set_nim(nim); //set nimnya
 
-				ex.del(temp);
+				ex.del(temp); //panggil prosedur untuk menghapus data
 			}
-			else if(order.equals("update")){
+			else if(command.equals("update")){ //jika update
 				System.out.println("Please Insert the Student ID/NIM of the student you want to update :");
-				nim = sc.next();
+				nim = sc.next(); //minta nim yang ingin diupdate
 
+				//kemudian minta masukan untuk atribut barunya
 				System.out.println("Name : ");
 				nama = sc.next();
 				System.out.println("Gender : ");
@@ -64,22 +68,26 @@ public class Main{
 				System.out.println("Degree : ");
 				prodi = sc.next();
 
+				//set value ke atribut
 				temp.set_nim(nim);
 				temp.set_nama(nama);
 				temp.set_gender(gender);
 				temp.set_fakultas(fakultas);
 				temp.set_prodi(prodi);
 
-				ex.update(temp);
+				ex.update(temp); //panggil prosedur untuk mengupdate
 			}
-			else if(order.equals("show")){
-				ex.show();
+			else if(command.equals("show")){ //jika show
+				ex.show(); //panggi prosedur untuk menampilkan data pada list
 			}
-			else{
-				System.out.println("Please type a correct order!");
+			else if(command.equals("exit")){ //jika exit
+				System.out.println("Thank you for using this program :D");
+			}
+			else{ //jika bukan dari ke 5 command diatas
+				System.out.println("Please type a correct command!");
 			}
 
-		}while(!order.equals("exit"));
+		}while(!command.equals("exit")); //perulangan selama perintahnya bukan exit
 
 		sc.close();
 	}
