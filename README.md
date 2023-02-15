@@ -1,6 +1,6 @@
 # LATIHAN1DPBO2023
 ## Janji
-Dicki Fathurohman_2103842_Ilmu Komputer LATIHAN1DPBO2023 Saya Dicki Fathurohman [2103842] mengerjakan LATIHAN2DPBO2023 dalam mata kuliah DPBO untuk keberkahanNya maka saya tidak melakukan kecurangan seperti yang telah dispesifikan. Aamiin.
+Dicki Fathurohman_2103842_Ilmu Komputer LATIHAN1DPBO2023 Saya Dicki Fathurohman [2103842] mengerjakan LATIHAN1DPBO2023 dalam mata kuliah DPBO untuk keberkahanNya maka saya tidak melakukan kecurangan seperti yang telah dispesifikan. Aamiin.
 
 ## Desain
 Pada program yang dibuat terdapat dua kelas yaitu Mahasiswa dan CRUD.
